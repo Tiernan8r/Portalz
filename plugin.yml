@@ -1,0 +1,46 @@
+main: me.Tiernanator.Portalz.Main
+version: 2.0
+name: Portalz
+description: A Plugin that allows you to create Portals in game.
+load: POSTWORLD
+author: Tiernanator
+website: None
+database: false
+depend: [Utilities, Zoning]
+prefix: Portal
+softdepend: []
+loadbefore: []
+commands:
+    portal:
+        description: get a flint & steel, so you can create a portal.
+        #aliases: createPortal
+ #       permission: portal.create
+    createDestination:
+        description: Create a location as a portal destination.
+        #aliases: addPortalDestination
+#       permission: portal.destination
+    portalDestinations:
+        description: List all available portal destinations.
+        #aliases: listDestinations
+#        permission: portal.list
+    portalColours:
+        description: List all available portal colours.
+        #aliases: listColours
+#        permission: portal.list
+        
+#permissions:
+#    portal.*:
+#        description: Gives access to all Portalz permissions
+#        children:
+#            portal.create: true
+#            portal.destination: true
+#            portal.list: true
+#    portal.create:
+#        description: Allows you to create a custom portal
+#        default: op
+#    portal.destination:
+#        description: Allows you to add a portal destination.
+#        default: op
+#    portal.list:
+#        description: Allows you to use list the listses.
+#        default: op
