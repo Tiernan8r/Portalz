@@ -6,15 +6,15 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
 import me.Tiernanator.Colours.Colour;
-import me.Tiernanator.Portalz.Main;
+import me.Tiernanator.Portalz.PortalzMain;
 import me.Tiernanator.Portalz.Enums.PortalColour;
 
 public class ListPortalColours implements CommandExecutor {
 
 	@SuppressWarnings("unused")
-	private static Main plugin;
+	private static PortalzMain plugin;
 
-	public ListPortalColours(Main main) {
+	public ListPortalColours(PortalzMain main) {
 		plugin = main;
 	}
 

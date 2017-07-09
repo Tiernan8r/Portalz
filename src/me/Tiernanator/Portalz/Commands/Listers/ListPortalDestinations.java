@@ -9,16 +9,16 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import me.Tiernanator.Colours.Colour;
-import me.Tiernanator.Portalz.Main;
+import me.Tiernanator.Portalz.PortalzMain;
 import me.Tiernanator.Portalz.Portal.PortalDestinations;
 import me.Tiernanator.Utilities.Locations.Zones.ZoneName;
 
 public class ListPortalDestinations implements CommandExecutor {
 
 	@SuppressWarnings("unused")
-	private static Main plugin;
+	private static PortalzMain plugin;
 
-	public ListPortalDestinations(Main main) {
+	public ListPortalDestinations(PortalzMain main) {
 		plugin = main;
 	}
 

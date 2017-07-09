@@ -1,9 +1,5 @@
 package me.Tiernanator.Portalz;
 
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
-
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -25,9 +21,8 @@ import me.Tiernanator.Portalz.Portal.Portal;
 import me.Tiernanator.Portalz.Portal.PortalConfig;
 import me.Tiernanator.Portalz.Portal.PortalDestinations;
 import me.Tiernanator.SQL.SQLServer;
-import me.Tiernanator.SQL.MySQL.MySQL;
 
-public class Main extends JavaPlugin {
+public class PortalzMain extends JavaPlugin {
 	
 	@Override
 	public void onEnable() {
@@ -39,15 +34,6 @@ public class Main extends JavaPlugin {
 		
 		CustomPortal.initialiseAllPortalsFromConfig();
 		
-	}
-
-	@Override
-	public void onDisable() {
-		try {
-			getSQL().closeConnection();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
 	}
 
 	public void registerCommands() {
@@ -82,69 +68,14 @@ public class Main extends JavaPlugin {
 		
 	}
 
-	private static MySQL mySQL;
-
 	private void initialiseSQL() {
 
-		mySQL = new MySQL(SQLServer.HOSTNAME, SQLServer.PORT, SQLServer.DATABASE,
-				SQLServer.USERNAME, SQLServer.PASSWORD);
-		
-//		String query = "CREATE DATABASE IF NOT EXISTS portals;";
-		
-		Connection connection = null;
-		try {
-			connection = mySQL.openConnection();
-		} catch (SQLException | ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-		
-		Statement statement = null;
-		try {
-			statement = connection.createStatement();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-//		try {
-//			statement.execute(query);
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-		
-//		query = "USE portals;";
-		String query = "USE " + SQLServer.DATABASE.getInfo() + ";";
-		
-		statement = null;
-		try {
-			statement = connection.createStatement();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-		try {
-			statement.execute(query);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
-		query = "CREATE TABLE IF NOT EXISTS Portals ( "
+		String query = "CREATE TABLE IF NOT EXISTS Portals ( "
 				+ "Name varchar(30) NOT NULL,"
 				+ "DestinationName varchar(30) NOT NULL,"
 				+ "FrameMaterial varchar(255)"
 				+ ");";
-		
-		statement = null;
-		try {
-			statement = connection.createStatement();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-		try {
-			statement.execute(query);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		SQLServer.executeQuery(query);
 		
 		query = "CREATE TABLE IF NOT EXISTS PortalDestinations ( "
 				+ "Name varchar(30) NOT NULL,"
@@ -155,65 +86,8 @@ public class Main extends JavaPlugin {
 				+ "Yaw int,"
 				+ "Pitch int "
 				+ ");";
-		
-		statement = null;
-		try {
-			statement = connection.createStatement();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-		try {
-			statement.execute(query);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		try {
-			statement.closeOnCompletion();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		SQLServer.executeQuery(query);
 		
 	}
 
-	public static MySQL getSQL() {
-		return mySQL;
-	}
-
-//	public static Connection getSQLConnection() {
-//
-//		try {
-//			if (!getSQL().checkConnection()) {
-//			return getSQL().openConnection();
-//		} else {
-//			return getSQL().getConnection();
-//		}
-//		} catch (ClassNotFoundException | SQLException e) {
-//			e.printStackTrace();
-//		}
-//		return null;
-//		Connection connection = null;
-//		try {
-//			if (!getSQL().checkConnection()) {
-//				connection = getSQL().openConnection();
-//			} else {
-//				connection = getSQL().getConnection();
-//			}
-//		} catch (ClassNotFoundException | SQLException e) {
-//			e.printStackTrace();
-//		}
-//		String query = "USE " + SQLServer.DATABASE.getInfo() + ";";
-//		Statement statement = null;
-//		try {
-//			statement = connection.createStatement();
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//		try {
-//			statement.execute(query);
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//		return connection;
-//	}
 }

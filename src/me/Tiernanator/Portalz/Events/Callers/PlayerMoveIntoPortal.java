@@ -8,7 +8,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 
-import me.Tiernanator.Portalz.Main;
+import me.Tiernanator.Portalz.PortalzMain;
 import me.Tiernanator.Portalz.Events.CustomEvents.CustomPlayerPortalUseEvent;
 import me.Tiernanator.Portalz.Portal.CustomPortal;
 import me.Tiernanator.Utilities.MetaData.MetaData;
@@ -16,9 +16,9 @@ import me.Tiernanator.Utilities.Players.PlayerTime;
 
 public class PlayerMoveIntoPortal implements Listener {
 
-	private Main plugin;
+	private PortalzMain plugin;
 
-	public PlayerMoveIntoPortal(Main main) {
+	public PlayerMoveIntoPortal(PortalzMain main) {
 		plugin = main;
 	}
 	

@@ -5,7 +5,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
 import me.Tiernanator.Materials.BuildingMaterial;
-import me.Tiernanator.Portalz.Main;
+import me.Tiernanator.Portalz.PortalzMain;
 import me.Tiernanator.Portalz.Events.CustomEvents.CustomPlayerBreakPortalEvent;
 import me.Tiernanator.Portalz.Portal.CustomPortal;
 import me.Tiernanator.Utilities.Locations.Region.Region;
@@ -13,9 +13,9 @@ import me.Tiernanator.Utilities.MetaData.MetaData;
 
 public class PlayerPortalBreak implements Listener {
 
-	private static Main plugin;
+	private static PortalzMain plugin;
 	
-	public PlayerPortalBreak(Main main) {
+	public PlayerPortalBreak(PortalzMain main) {
 		plugin = main;
 	}
 

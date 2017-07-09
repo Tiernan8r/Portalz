@@ -9,7 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import me.Tiernanator.Colours.Colour;
-import me.Tiernanator.Portalz.Main;
+import me.Tiernanator.Portalz.PortalzMain;
 import me.Tiernanator.Portalz.Portal.PortalDestinations;
 import me.Tiernanator.Utilities.Locations.RelativeLocation;
 import me.Tiernanator.Utilities.Locations.Zones.ZoneName;
@@ -17,7 +17,7 @@ import me.Tiernanator.Utilities.Locations.Zones.ZoneName;
 public class SetPortalDestination implements CommandExecutor {
 
 	@SuppressWarnings("unused")
-	private static Main plugin;
+	private static PortalzMain plugin;
 
 	double x;
 	double y;
@@ -31,7 +31,7 @@ public class SetPortalDestination implements CommandExecutor {
 	ChatColor regal;
 	ChatColor bad;
 
-	public SetPortalDestination(Main main) {
+	public SetPortalDestination(PortalzMain main) {
 		plugin = main;
 	}
 

@@ -14,7 +14,7 @@ import org.bukkit.event.Listener;
 
 import me.Tiernanator.Colours.Colour;
 import me.Tiernanator.Materials.BuildingMaterial;
-import me.Tiernanator.Portalz.Main;
+import me.Tiernanator.Portalz.PortalzMain;
 import me.Tiernanator.Portalz.Enums.PortalColour;
 import me.Tiernanator.Portalz.Events.CustomEvents.CustomPlayerPortalCreateEvent;
 import me.Tiernanator.Portalz.Events.CustomEvents.CustomPlayerPortalInitialiseEvent;
@@ -27,12 +27,12 @@ public class PlayerPortalInitialise implements Listener {
 
 	ChatColor bad = Colour.BAD.getColour();
 	
-	private static Main plugin;
+	private static PortalzMain plugin;
 	private static List<Block> frameBlocks = new ArrayList<Block>();
 	private static List<Block> fillBlocks = new ArrayList<Block>();
 
 	
-	public PlayerPortalInitialise(Main main) {
+	public PlayerPortalInitialise(PortalzMain main) {
 		plugin = main;
 	}
 

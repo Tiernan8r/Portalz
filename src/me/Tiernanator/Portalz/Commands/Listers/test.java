@@ -13,16 +13,16 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.Tiernanator.Portalz.Main;
+import me.Tiernanator.Portalz.PortalzMain;
 import me.Tiernanator.Portalz.Commands.Temp;
 import me.Tiernanator.Utilities.Locations.Region.Region;
 
 public class test implements CommandExecutor {
 
 	@SuppressWarnings("unused")
-	private static Main plugin;
+	private static PortalzMain plugin;
 
-	public test(Main main) {
+	public test(PortalzMain main) {
 		plugin = main;
 	}
 

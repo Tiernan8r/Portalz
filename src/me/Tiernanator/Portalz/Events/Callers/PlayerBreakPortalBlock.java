@@ -10,7 +10,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 
-import me.Tiernanator.Portalz.Main;
+import me.Tiernanator.Portalz.PortalzMain;
 import me.Tiernanator.Portalz.Events.CustomEvents.CustomPlayerBreakPortalEvent;
 import me.Tiernanator.Portalz.Portal.CustomPortal;
 import me.Tiernanator.Portalz.Portal.Portal;
@@ -21,11 +21,11 @@ import me.Tiernanator.Utilities.MetaData.MetaData;
 
 public class PlayerBreakPortalBlock implements Listener {
 
-	private static Main plugin;
+	private static PortalzMain plugin;
 	private static List<Block> allBlocks = new ArrayList<Block>();
 
 	
-	public PlayerBreakPortalBlock(Main main) {
+	public PlayerBreakPortalBlock(PortalzMain main) {
 		plugin = main;
 	}
 

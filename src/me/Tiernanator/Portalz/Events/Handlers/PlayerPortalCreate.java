@@ -10,7 +10,7 @@ import org.bukkit.event.Listener;
 
 import me.Tiernanator.Colours.Colour;
 import me.Tiernanator.Materials.BuildingMaterial;
-import me.Tiernanator.Portalz.Main;
+import me.Tiernanator.Portalz.PortalzMain;
 import me.Tiernanator.Portalz.Enums.PortalColour;
 import me.Tiernanator.Portalz.Events.CustomEvents.CustomPlayerPortalCreateEvent;
 import me.Tiernanator.Portalz.Portal.CustomPortal;
@@ -21,10 +21,10 @@ import me.Tiernanator.Utilities.Locations.Region.Region;
 public class PlayerPortalCreate implements Listener {
 
 	@SuppressWarnings("unused")
-	private static Main plugin;
+	private static PortalzMain plugin;
 	private ChatColor bad = Colour.BAD.getColour();
 	
-	public PlayerPortalCreate(Main main) {
+	public PlayerPortalCreate(PortalzMain main) {
 		plugin = main;
 	}
 

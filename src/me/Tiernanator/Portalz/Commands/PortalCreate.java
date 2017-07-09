@@ -13,18 +13,18 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import me.Tiernanator.Colours.Colour;
-import me.Tiernanator.Portalz.Main;
+import me.Tiernanator.Portalz.PortalzMain;
 
 public class PortalCreate implements CommandExecutor {
 
 	@SuppressWarnings("unused")
-	private static Main plugin;
+	private static PortalzMain plugin;
 
 	ChatColor warning;
 	ChatColor informative;
 	ChatColor good;
 
-	public PortalCreate(Main main) {
+	public PortalCreate(PortalzMain main) {
 		plugin = main;
 	}
 
@@ -41,11 +41,6 @@ public class PortalCreate implements CommandExecutor {
 
 		Player player = (Player) sender;
 
-//		if (!(player.hasPermission("portalz.portal.create"))) {
-//			player.sendMessage(warning
-//					+ "You do not have permission to use this command.");
-//			return true;
-//		}
 		ItemStack flintAndSteel = new ItemStack(Material.FLINT_AND_STEEL);
 		ItemMeta itemMeta = flintAndSteel.getItemMeta();
 		

@@ -12,7 +12,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.ExplosionPrimeEvent;
 
-import me.Tiernanator.Portalz.Main;
+import me.Tiernanator.Portalz.PortalzMain;
 import me.Tiernanator.Portalz.Events.CustomEvents.CustomPortalExplodeEvent;
 import me.Tiernanator.Portalz.Portal.CustomPortal;
 import me.Tiernanator.Portalz.Portal.Portal;
@@ -23,11 +23,11 @@ import me.Tiernanator.Utilities.MetaData.MetaData;
 
 public class ExplosionNearPortal implements Listener {
 
-	private static Main plugin;
+	private static PortalzMain plugin;
 	private static List<Block> allBlocks = new ArrayList<Block>();
 
 	
-	public ExplosionNearPortal(Main main) {
+	public ExplosionNearPortal(PortalzMain main) {
 		plugin = main;
 	}
 

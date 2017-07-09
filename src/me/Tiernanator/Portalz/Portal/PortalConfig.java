@@ -9,14 +9,14 @@ import org.bukkit.World;
 import org.bukkit.block.Block;
 
 import me.Tiernanator.File.ConfigAccessor;
-import me.Tiernanator.Portalz.Main;
+import me.Tiernanator.Portalz.PortalzMain;
 import me.Tiernanator.Portalz.Enums.PortalColour;
 
 public class PortalConfig {
 
-	private static Main plugin;
+	private static PortalzMain plugin;
 
-	public static void setPlugin(Main main) {
+	public static void setPlugin(PortalzMain main) {
 		plugin = main;
 	}
 

@@ -14,7 +14,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
 import me.Tiernanator.Colours.Colour;
-import me.Tiernanator.Portalz.Main;
+import me.Tiernanator.Portalz.PortalzMain;
 import me.Tiernanator.Portalz.Enums.PortalColour;
 import me.Tiernanator.Portalz.Events.CustomEvents.CustomPlayerPortalInitialiseEvent;
 import me.Tiernanator.Portalz.Portal.Portal;
@@ -25,13 +25,13 @@ import me.Tiernanator.Zoning.Zone.Zone;
 public class PlayerFlintAndSteelInteract implements Listener {
 
 	@SuppressWarnings("unused")
-	private Main plugin;
+	private PortalzMain plugin;
 	private ChatColor bad = Colour.BAD.getColour();
 	private ChatColor highlight = Colour.HIGHLIGHT.getColour();
 	private ChatColor warning = Colour.WARNING.getColour();
 	private ChatColor informative = Colour.INFORMATIVE.getColour();
 
-	public PlayerFlintAndSteelInteract(Main main) {
+	public PlayerFlintAndSteelInteract(PortalzMain main) {
 		plugin = main;
 	}
 

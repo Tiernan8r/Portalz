@@ -26,7 +26,10 @@ public class CustomPortal {
 		plugin = main;
 	}
 
-	public CustomPortal(String portalName, Region frame, Region portalBlocks, String destinationName, Location destination, BuildingMaterial original, PortalColour portalColour, JavaPlugin plugin) {
+	public CustomPortal(String portalName, Region frame, Region portalBlocks,
+			String destinationName, Location destination,
+			BuildingMaterial original, PortalColour portalColour,
+			JavaPlugin plugin) {
 
 		this.portalFrame = frame;
 		this.portalBlocks = portalBlocks;
@@ -35,9 +38,9 @@ public class CustomPortal {
 		this.destination = destination;
 		this.originalFrame = original;
 		this.portalColour = portalColour;
-		
+
 		CustomPortal.plugin = plugin;
-		
+
 		PortalConfig.savePortalFrame(portalName, frame.allBlocks());
 		PortalConfig.savePortalBlocks(portalName, portalBlocks.allBlocks());
 		PortalConfig.savePortalColour(portalName, portalColour);
@@ -48,11 +51,11 @@ public class CustomPortal {
 	public Region getPortalFrame() {
 		return this.portalFrame;
 	}
-	
+
 	public String getPortalDestinationName() {
 		return this.destinationName;
 	}
-	
+
 	public Location getPortalDestination() {
 		return this.destination;
 	}
@@ -64,27 +67,28 @@ public class CustomPortal {
 	public String getPortalName() {
 		return this.portalName;
 	}
-	
+
 	public BuildingMaterial getOriginalFramMaterial() {
 		return this.originalFrame;
 	}
-	
+
 	public PortalColour getPortalColour() {
 		return this.portalColour;
 	}
 
 	public void initialisePortal() {
-		
+
 		Region allPortalBlocks = getPortalBlocks();
 		String destinationName = getPortalDestinationName();
 		String portalName = getPortalName();
 		for (Block block : allPortalBlocks.allBlocks()) {
 			MetaData.setMetadata(block, "isPortal", true, plugin);
 			MetaData.setMetadata(block, "Portal Name", portalName, plugin);
-			MetaData.setMetadata(block, "Destination Name", destinationName, plugin);
+			MetaData.setMetadata(block, "Destination Name", destinationName,
+					plugin);
 			MetaData.setMetadata(block, "Custom Portal", this, plugin);
 		}
-		
+
 		for (Block block : portalFrame.allBlocks()) {
 			MetaData.setMetadata(block, "isPortal", true, plugin);
 			MetaData.setMetadata(block, "Portal Name", portalName, plugin);
@@ -96,24 +100,31 @@ public class CustomPortal {
 	public static void initialiseAllPortalsFromConfig() {
 
 		List<String> allPortals = Portal.allPortalNames();
-		if(allPortals == null) {
+		if (allPortals == null) {
 			return;
 		}
 
 		for (String portalName : allPortals) {
 
-			String destinationName = Portal.getPortalDestinationName(portalName);
-			Location destination = PortalDestinations.getPortalDestination(destinationName);
-			
-			BuildingMaterial originalFrameMaterial = Portal.getPortalOriginalMaterial(portalName);
-			
-			Region portalFrame = new Region(PortalConfig.getPortalFrame(portalName));
-			Region portalBlocks = new Region(PortalConfig.getPortalBlocks(portalName));
+			String destinationName = Portal
+					.getPortalDestinationName(portalName);
+			Location destination = PortalDestinations
+					.getPortalDestination(destinationName);
 
-			PortalColour portalColour = PortalConfig.getPortalColour(portalName);
-			
-			CustomPortal portal = new CustomPortal(portalName, portalFrame, portalBlocks, destinationName, destination, originalFrameMaterial, portalColour,
-					plugin);
+			BuildingMaterial originalFrameMaterial = Portal
+					.getPortalOriginalMaterial(portalName);
+
+			Region portalFrame = new Region(
+					PortalConfig.getPortalFrame(portalName));
+			Region portalBlocks = new Region(
+					PortalConfig.getPortalBlocks(portalName));
+
+			PortalColour portalColour = PortalConfig
+					.getPortalColour(portalName);
+
+			CustomPortal portal = new CustomPortal(portalName, portalFrame,
+					portalBlocks, destinationName, destination,
+					originalFrameMaterial, portalColour, plugin);
 			portal.initialisePortal();
 
 		}

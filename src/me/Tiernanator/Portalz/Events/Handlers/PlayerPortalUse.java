@@ -7,19 +7,19 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
 import me.Tiernanator.Colours.Colour;
-import me.Tiernanator.Portalz.Main;
+import me.Tiernanator.Portalz.PortalzMain;
 import me.Tiernanator.Portalz.Events.CustomEvents.CustomPlayerPortalUseEvent;
 import me.Tiernanator.Portalz.Portal.CustomPortal;
 
 public class PlayerPortalUse implements Listener {
 
 	@SuppressWarnings("unused")
-	private Main plugin;
+	private PortalzMain plugin;
 	private ChatColor good = Colour.GOOD.getColour();
 	private ChatColor informative = Colour.INFORMATIVE.getColour();
 	private ChatColor highlight = Colour.HIGHLIGHT.getColour();
 
-	public PlayerPortalUse(Main main) {
+	public PlayerPortalUse(PortalzMain main) {
 		plugin = main;
 	}
 	
