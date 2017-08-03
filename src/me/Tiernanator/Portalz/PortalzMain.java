@@ -20,7 +20,7 @@ import me.Tiernanator.Portalz.Portal.CustomPortal;
 import me.Tiernanator.Portalz.Portal.Portal;
 import me.Tiernanator.Portalz.Portal.PortalConfig;
 import me.Tiernanator.Portalz.Portal.PortalDestinations;
-import me.Tiernanator.SQL.SQLServer;
+import me.Tiernanator.Utilities.SQL.SQLServer;
 
 public class PortalzMain extends JavaPlugin {
 	

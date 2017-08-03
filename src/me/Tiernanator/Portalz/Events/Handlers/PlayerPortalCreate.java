@@ -8,15 +8,15 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
-import me.Tiernanator.Colours.Colour;
-import me.Tiernanator.Materials.BuildingMaterial;
 import me.Tiernanator.Portalz.PortalzMain;
 import me.Tiernanator.Portalz.Enums.PortalColour;
 import me.Tiernanator.Portalz.Events.CustomEvents.CustomPlayerPortalCreateEvent;
 import me.Tiernanator.Portalz.Portal.CustomPortal;
 import me.Tiernanator.Portalz.Portal.Portal;
 import me.Tiernanator.Portalz.Portal.PortalDestinations;
+import me.Tiernanator.Utilities.Colours.Colour;
 import me.Tiernanator.Utilities.Locations.Region.Region;
+import me.Tiernanator.Utilities.Materials.BuildingMaterial;
 
 public class PlayerPortalCreate implements Listener {
 

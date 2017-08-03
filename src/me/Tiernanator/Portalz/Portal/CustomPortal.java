@@ -6,9 +6,9 @@ import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import me.Tiernanator.Materials.BuildingMaterial;
 import me.Tiernanator.Portalz.Enums.PortalColour;
 import me.Tiernanator.Utilities.Locations.Region.Region;
+import me.Tiernanator.Utilities.Materials.BuildingMaterial;
 import me.Tiernanator.Utilities.MetaData.MetaData;
 
 public class CustomPortal {

@@ -5,9 +5,9 @@ import java.util.List;
 
 import org.bukkit.Location;
 
-import me.Tiernanator.Materials.BuildingMaterial;
 import me.Tiernanator.Portalz.PortalzMain;
-import me.Tiernanator.SQL.SQLServer;
+import me.Tiernanator.Utilities.Materials.BuildingMaterial;
+import me.Tiernanator.Utilities.SQL.SQLServer;
 
 public class Portal {
 
@@ -83,7 +83,7 @@ public class Portal {
 			BuildingMaterial material) {
 
 		String statement = "UPDATE Portals SET FrameMaterial = ? WHERE Name = ?;";
-		Object[] values = new Object[]{material.name(), portalName};
+		Object[] values = new Object[]{material.getName(), portalName};
 		SQLServer.executePreparedStatement(statement, values);
 
 	}
@@ -107,7 +107,7 @@ public class Portal {
 
 		String statement = "INSERT INTO Portals (Name, DestinationName, FrameMaterial) VALUES (?, ?, ?);";
 		Object[] values = new Object[]{name, destinationName,
-				originalFrameMaterial.name()};
+				originalFrameMaterial.getName()};
 		SQLServer.executePreparedStatement(statement, values);
 
 	}
@@ -134,7 +134,7 @@ public class Portal {
 			return frameMaterial;
 		}
 
-		return BuildingMaterial.DIAMOND;
+		return BuildingMaterial.getBuildingMaterial("DIAMOND_BLOCK");
 
 	}
 

@@ -5,9 +5,9 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-import me.Tiernanator.Colours.Colour;
 import me.Tiernanator.Portalz.PortalzMain;
 import me.Tiernanator.Portalz.Enums.PortalColour;
+import me.Tiernanator.Utilities.Colours.Colour;
 
 public class ListPortalColours implements CommandExecutor {
 

@@ -8,9 +8,9 @@ import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.block.Block;
 
-import me.Tiernanator.File.ConfigAccessor;
 import me.Tiernanator.Portalz.PortalzMain;
 import me.Tiernanator.Portalz.Enums.PortalColour;
+import me.Tiernanator.Utilities.File.ConfigAccessor;
 
 public class PortalConfig {
 

@@ -6,11 +6,11 @@ import org.bukkit.block.Block;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
-import me.Tiernanator.Materials.BuildingMaterial;
 import me.Tiernanator.Portalz.PortalzMain;
 import me.Tiernanator.Portalz.Events.CustomEvents.CustomPortalExplodeEvent;
 import me.Tiernanator.Portalz.Portal.CustomPortal;
 import me.Tiernanator.Utilities.Locations.Region.Region;
+import me.Tiernanator.Utilities.Materials.BuildingMaterial;
 import me.Tiernanator.Utilities.MetaData.MetaData;
 
 public class PortalExplode implements Listener {
@@ -33,7 +33,7 @@ public class PortalExplode implements Listener {
 		World world = explosionLocation.getWorld();
 		
 		CustomPortal customPortal = event.getPortal();
-		customPortal.getPortalBlocks().fill(BuildingMaterial.AIR);
+		customPortal.getPortalBlocks().fill(BuildingMaterial.getBuildingMaterial("AIR"));
 		
 		for(Block frameBlock : customPortal.getPortalFrame().allBlocks()) {
 			MetaData.setMetadata(frameBlock, "isPortal", null, plugin);

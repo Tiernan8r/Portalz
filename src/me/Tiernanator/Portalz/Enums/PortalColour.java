@@ -1,6 +1,6 @@
 package me.Tiernanator.Portalz.Enums;
 
-import me.Tiernanator.Materials.BuildingMaterial;
+import me.Tiernanator.Utilities.Materials.BuildingMaterial;
 
 public enum PortalColour {
 	
@@ -27,41 +27,41 @@ public enum PortalColour {
 		
 		switch(this) {
 			case BLACK :
-				return BuildingMaterial.BLACK_STAINED_GLASS_PANE;
+				return BuildingMaterial.getBuildingMaterial("BLACK_STAINED_GLASS_PANE");
 			case BLUE :
-				return BuildingMaterial.BLUE_STAINED_GLASS_PANE;
+				return BuildingMaterial.getBuildingMaterial("BLUE_STAINED_GLASS_PANE");
 			case BROWN :
-				return BuildingMaterial.BROWN_STAINED_GLASS_PANE;
+				return BuildingMaterial.getBuildingMaterial("BROWN_STAINED_GLASS_PANE");
 			case COLOURLESS :
-				return BuildingMaterial.GLASS_PANE;
+				return BuildingMaterial.getBuildingMaterial("GLASS_PANE");
 			case CYAN :
-				return BuildingMaterial.CYAN_STAINED_GLASS_PANE;
+				return BuildingMaterial.getBuildingMaterial("CYAN_STAINED_GLASS_PANE");
 			case GREEN :
-				return BuildingMaterial.GREEN_STAINED_GLASS_PANE;
+				return BuildingMaterial.getBuildingMaterial("GREEN_STAINED_GLASS_PANE");
 			case GREY :
-				return BuildingMaterial.GREY_STAINED_GLASS_PANE;
+				return BuildingMaterial.getBuildingMaterial("GREY_STAINED_GLASS_PANE");
 			case IRON :
-				return BuildingMaterial.IRON_BARS;
+				return BuildingMaterial.getBuildingMaterial("IRON_BARS");
 			case LIGHT_BLUE :
-				return BuildingMaterial.LIGHT_BLUE_STAINED_GLASS_PANE;
+				return BuildingMaterial.getBuildingMaterial("LIGHT_BLUE_STAINED_GLASS_PANE");
 			case LIGHT_GREY :
-				return BuildingMaterial.LIGHT_GREY_STAINED_GLASS_PANE;
+				return BuildingMaterial.getBuildingMaterial("LIGHT_GREY_STAINED_GLASS_PANE");
 			case LIME :
-				return BuildingMaterial.LIME_STAINED_GLASS_PANE;
+				return BuildingMaterial.getBuildingMaterial("LIME_STAINED_GLASS_PANE");
 			case MAGENTA :
-				return BuildingMaterial.MAGENTA_STAINED_GLASS_PANE;
+				return BuildingMaterial.getBuildingMaterial("MAGENTA_STAINED_GLASS_PANE");
 			case ORANGE :
-				return BuildingMaterial.ORANGE_STAINED_GLASS_PANE;
+				return BuildingMaterial.getBuildingMaterial("ORANGE_STAINED_GLASS_PANE");
 			case PINK :
-				return BuildingMaterial.PINK_STAINED_GLASS_PANE;
+				return BuildingMaterial.getBuildingMaterial("PINK_STAINED_GLASS_PANE");
 			case PURPLE :
-				return BuildingMaterial.PURPLE_STAINED_GLASS_PANE;
+				return BuildingMaterial.getBuildingMaterial("PURPLE_STAINED_GLASS_PANE");
 			case RED :
-				return BuildingMaterial.RED_STAINED_GLASS_PANE;
+				return BuildingMaterial.getBuildingMaterial("RED_STAINED_GLASS_PANE");
 			case WHITE :
-				return BuildingMaterial.WHITE_STAINED_GLASS_PANE;
+				return BuildingMaterial.getBuildingMaterial("WHITE_STAINED_GLASS_PANE");
 			case YELLOW :
-				return BuildingMaterial.YELLOW_STAINED_GLASS_PANE;
+				return BuildingMaterial.getBuildingMaterial("YELLOW_STAINED_GLASS_PANE");
 			default :
 				return null;
 			

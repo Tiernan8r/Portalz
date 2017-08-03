@@ -7,7 +7,7 @@ import org.bukkit.Location;
 import org.bukkit.World;
 
 import me.Tiernanator.Portalz.PortalzMain;
-import me.Tiernanator.SQL.SQLServer;
+import me.Tiernanator.Utilities.SQL.SQLServer;
 
 public class PortalDestinations {
 

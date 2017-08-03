@@ -6,10 +6,10 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
-import me.Tiernanator.Colours.Colour;
 import me.Tiernanator.Portalz.PortalzMain;
 import me.Tiernanator.Portalz.Events.CustomEvents.CustomPlayerPortalUseEvent;
 import me.Tiernanator.Portalz.Portal.CustomPortal;
+import me.Tiernanator.Utilities.Colours.Colour;
 
 public class PlayerPortalUse implements Listener {
 

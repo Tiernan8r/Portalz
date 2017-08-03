@@ -12,8 +12,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import me.Tiernanator.Colours.Colour;
 import me.Tiernanator.Portalz.PortalzMain;
+import me.Tiernanator.Utilities.Colours.Colour;
 
 public class PortalCreate implements CommandExecutor {
 

@@ -13,12 +13,12 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
-import me.Tiernanator.Colours.Colour;
 import me.Tiernanator.Portalz.PortalzMain;
 import me.Tiernanator.Portalz.Enums.PortalColour;
 import me.Tiernanator.Portalz.Events.CustomEvents.CustomPlayerPortalInitialiseEvent;
 import me.Tiernanator.Portalz.Portal.Portal;
 import me.Tiernanator.Portalz.Portal.PortalDestinations;
+import me.Tiernanator.Utilities.Colours.Colour;
 import me.Tiernanator.Utilities.Locations.Zones.ZoneName;
 import me.Tiernanator.Zoning.Zone.Zone;
 
