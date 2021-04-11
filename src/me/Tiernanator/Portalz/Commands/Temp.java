@@ -51,22 +51,23 @@ public class Temp {
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	public ArrayList<Block> getSurrounding(Block b) {
 
 		ArrayList<Block> blocks = new ArrayList<Block>();
 
 		Material[] list = new Material[]{Material.AIR,
 				Material.WATER,
-				Material.STATIONARY_WATER, 
+				Material.LEGACY_STATIONARY_WATER, 
 				Material.LAVA,
-				Material.STATIONARY_LAVA,
+				Material.LEGACY_STATIONARY_LAVA,
 				Material.GRASS,
 				Material.DIRT,
 				Material.STONE,
 				Material.SAND,
 				Material.BEDROCK,
 				Material.GRAVEL,
-				Material.LEAVES
+				Material.LEGACY_LEAVES
 		};
 
 		List<Material> banned = Arrays.asList(list);

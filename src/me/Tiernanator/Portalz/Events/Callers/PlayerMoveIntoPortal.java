@@ -22,6 +22,7 @@ public class PlayerMoveIntoPortal implements Listener {
 		plugin = main;
 	}
 	
+	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void playerCustomPortalUse(PlayerMoveEvent event) {
 		
@@ -32,7 +33,7 @@ public class PlayerMoveIntoPortal implements Listener {
 		Block block = playerLocation.getBlock();
 		
 		boolean isValidPortalBlock = false;
-		if(block.getType() == Material.STAINED_GLASS_PANE || block.getType() == Material.THIN_GLASS || block.getType() == Material.IRON_FENCE || block.getType() == Material.PORTAL) {
+		if(block.getType() == Material.LEGACY_STAINED_GLASS_PANE || block.getType() == Material.LEGACY_THIN_GLASS || block.getType() == Material.LEGACY_IRON_FENCE || block.getType() == Material.LEGACY_PORTAL) {
 			isValidPortalBlock = true;
 		}
 		
